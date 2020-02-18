@@ -1,5 +1,5 @@
-head(airquality)#shows first 6 data
-tail(airquality)#shows last 6 data
+head(airquality)#shows first 6 elements data
+tail(airquality)#shows last 6 elements data
 airquality[,c(1,2)]
 airquality[,c(5,6)]
 airquality$Temp
