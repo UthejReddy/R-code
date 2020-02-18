@@ -1,21 +1,20 @@
-head(airquality)
-tail(airquality)
+head(airquality)#shows first 6 data
+tail(airquality)#shows last 6 data
 airquality[,c(1,2)]
 airquality[,c(5,6)]
 airquality$Temp
 
-summary(airquality$Temp)
-summary(airquality$Ozone)
-summary(airquality$Wind)
+summary(airquality$Temp)#shows the mean,median and mode of coloumn Temp
+summary(airquality$Ozone)#shows the mean,median and mode of coloumn Ozone
+summary(airquality$Wind)#shows the mean,median and mode of coloumn Wind
 
-plot(airquality$Ozone,airquality$Temp)
-plot(airquality)
-summary(airquality)
+plot(airquality$Ozone,airquality$Temp)#plots the graph for coloumn Ozone and Temp
+plot(airquality))#plots the graph for dataset airquality
+summary(airquality))#shows the mean,median and mode for dataset airquality
 
-summary(airquality$Temp)
 
-plot(airquality$Ozone,type = "l")
-plot(airquality$Ozone,xlab = 'ozone concentration',ylab ='no of instances',main = 'ozone levels in ny city',col='blue' )
+plot(airquality$Ozone,type = "l")#plots the graph for coloumn Ozone with type "l"
+plot(airquality$Ozone,xlab = 'ozone concentration',ylab ='no of instances',main = 'ozone levels in ny city',col='blue' )#plots the graph for coloumn Ozone and labbeling the x-axix & y-axix
 
 #barchart
 barplot(airquality$Ozone,main = 'ozone concentration in air',xlab = 'ozone levels',col = 'blue',horiz = FALSE)
