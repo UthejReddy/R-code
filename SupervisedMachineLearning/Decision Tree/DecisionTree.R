@@ -7,10 +7,11 @@ data("iris")
 install.packages("caret")
 install.packages("C50")
 
+#import libraries
 library(caret)
 library(C50)
 
-#create partition for the main dataset 
+#create partition for the main dataset (train and test data)
 inTraininglocal<-createDataPartition(iris$Species,p=.70,list=F)
 training<-iris[inTraininglocal,]#training is one partition
 testing<-iris[-inTraininglocal,]#testing is another partition
@@ -25,6 +26,7 @@ summary(model)
 pred<-predict.C5.0(model,testing[,-5])
 a<-table(testing$Species,pred)
 a
+#to get the accuracy
 sum(diag(a))/sum(a)
 plot(model)#plot the decision tree
 
